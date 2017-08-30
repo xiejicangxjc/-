@@ -1,0 +1,482 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		7F909CB21F55721800197530 /* AMapNaviKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7F909CB11F55721800197530 /* AMapNaviKit.framework */; };
+		7F909CB61F55731B00197530 /* NaviViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7F909CB41F55731B00197530 /* NaviViewController.m */; };
+		7F909CB71F55731B00197530 /* NaviViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7F909CB51F55731B00197530 /* NaviViewController.xib */; };
+		7F909CBA1F559F5600197530 /* SpeechSynthesizer.m in Sources */ = {isa = PBXBuildFile; fileRef = 7F909CB91F559F5600197530 /* SpeechSynthesizer.m */; };
+		7F909CBD1F55A34F00197530 /* DriveNaviViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7F909CBC1F55A34F00197530 /* DriveNaviViewController.m */; };
+		7F909CC01F55A39900197530 /* MoreMenuView.m in Sources */ = {isa = PBXBuildFile; fileRef = 7F909CBF1F55A39900197530 /* MoreMenuView.m */; };
+		7F909CC31F55A6BA00197530 /* QuickStartAnnotationView.m in Sources */ = {isa = PBXBuildFile; fileRef = 7F909CC21F55A6BA00197530 /* QuickStartAnnotationView.m */; };
+		7F909CC71F55A95B00197530 /* navi@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 7F909CC41F55A95B00197530 /* navi@2x.png */; };
+		7F909CC81F55A95B00197530 /* naviBackgroundHighlighted.png in Resources */ = {isa = PBXBuildFile; fileRef = 7F909CC51F55A95B00197530 /* naviBackgroundHighlighted.png */; };
+		7F909CC91F55A95B00197530 /* naviBackgroundNormal.png in Resources */ = {isa = PBXBuildFile; fileRef = 7F909CC61F55A95B00197530 /* naviBackgroundNormal.png */; };
+		7F909CCB1F55AD1E00197530 /* AMapNavi.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 7F909CCA1F55AD1E00197530 /* AMapNavi.bundle */; };
+		7FA1D08A1F53B56A007A9D84 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 7FA1D0891F53B56A007A9D84 /* main.m */; };
+		7FA1D08D1F53B56A007A9D84 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 7FA1D08C1F53B56A007A9D84 /* AppDelegate.m */; };
+		7FA1D0901F53B56A007A9D84 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7FA1D08F1F53B56A007A9D84 /* ViewController.m */; };
+		7FA1D0931F53B56A007A9D84 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7FA1D0911F53B56A007A9D84 /* Main.storyboard */; };
+		7FA1D0951F53B56A007A9D84 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7FA1D0941F53B56A007A9D84 /* Assets.xcassets */; };
+		7FA1D0981F53B56A007A9D84 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7FA1D0961F53B56A007A9D84 /* LaunchScreen.storyboard */; };
+		7FA1D0A11F53B5FD007A9D84 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7FA1D0A01F53B5FD007A9D84 /* MapKit.framework */; };
+		7FA1D0A61F53B655007A9D84 /* AMapFoundationKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7FA1D0A31F53B655007A9D84 /* AMapFoundationKit.framework */; };
+		7FA1D0A71F53B655007A9D84 /* AMapSearchKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7FA1D0A41F53B655007A9D84 /* AMapSearchKit.framework */; };
+		7FA1D0A81F53B655007A9D84 /* MAMapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7FA1D0A51F53B655007A9D84 /* MAMapKit.framework */; };
+		7FA1D0AA1F53B855007A9D84 /* libc++.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 7FA1D0A91F53B855007A9D84 /* libc++.tbd */; };
+		7FA1D0AC1F53B861007A9D84 /* libz.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 7FA1D0AB1F53B861007A9D84 /* libz.tbd */; };
+		7FA1D0AE1F53B86B007A9D84 /* libstdc++.6.0.9.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 7FA1D0AD1F53B86B007A9D84 /* libstdc++.6.0.9.tbd */; };
+		7FA1D0B01F53B875007A9D84 /* GLKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7FA1D0AF1F53B875007A9D84 /* GLKit.framework */; };
+		7FA1D0B21F53B87E007A9D84 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7FA1D0B11F53B87E007A9D84 /* Security.framework */; };
+		7FA1D0B41F53B886007A9D84 /* JavaScriptCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7FA1D0B31F53B886007A9D84 /* JavaScriptCore.framework */; };
+		7FA1D0B61F53B88F007A9D84 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7FA1D0B51F53B88F007A9D84 /* CoreLocation.framework */; };
+		7FA1D0B81F53B89B007A9D84 /* CoreTelephony.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7FA1D0B71F53B89B007A9D84 /* CoreTelephony.framework */; };
+		7FA1D0BA1F53B9A8007A9D84 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7FA1D0B91F53B9A8007A9D84 /* SystemConfiguration.framework */; };
+		7FA1D0BC1F53B9F4007A9D84 /* AMap.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 7FA1D0BB1F53B9F4007A9D84 /* AMap.bundle */; };
+		7FA1D0BE1F53EB2A007A9D84 /* AMapLocationKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7FA1D0BD1F53EB2A007A9D84 /* AMapLocationKit.framework */; };
+		7FA1D0C21F5417A4007A9D84 /* TableCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 7FA1D0C01F5417A4007A9D84 /* TableCell.m */; };
+		7FA1D0C31F5417A4007A9D84 /* TableCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7FA1D0C11F5417A4007A9D84 /* TableCell.xib */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		7F909CB11F55721800197530 /* AMapNaviKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = AMapNaviKit.framework; sourceTree = "<group>"; };
+		7F909CB31F55731B00197530 /* NaviViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NaviViewController.h; sourceTree = "<group>"; };
+		7F909CB41F55731B00197530 /* NaviViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NaviViewController.m; sourceTree = "<group>"; };
+		7F909CB51F55731B00197530 /* NaviViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = NaviViewController.xib; sourceTree = "<group>"; };
+		7F909CB81F559F5600197530 /* SpeechSynthesizer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SpeechSynthesizer.h; sourceTree = "<group>"; };
+		7F909CB91F559F5600197530 /* SpeechSynthesizer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SpeechSynthesizer.m; sourceTree = "<group>"; };
+		7F909CBB1F55A34F00197530 /* DriveNaviViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DriveNaviViewController.h; sourceTree = "<group>"; };
+		7F909CBC1F55A34F00197530 /* DriveNaviViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DriveNaviViewController.m; sourceTree = "<group>"; };
+		7F909CBE1F55A39900197530 /* MoreMenuView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MoreMenuView.h; sourceTree = "<group>"; };
+		7F909CBF1F55A39900197530 /* MoreMenuView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MoreMenuView.m; sourceTree = "<group>"; };
+		7F909CC11F55A6BA00197530 /* QuickStartAnnotationView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QuickStartAnnotationView.h; sourceTree = "<group>"; };
+		7F909CC21F55A6BA00197530 /* QuickStartAnnotationView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QuickStartAnnotationView.m; sourceTree = "<group>"; };
+		7F909CC41F55A95B00197530 /* navi@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "navi@2x.png"; sourceTree = "<group>"; };
+		7F909CC51F55A95B00197530 /* naviBackgroundHighlighted.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = naviBackgroundHighlighted.png; sourceTree = "<group>"; };
+		7F909CC61F55A95B00197530 /* naviBackgroundNormal.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = naviBackgroundNormal.png; sourceTree = "<group>"; };
+		7F909CCA1F55AD1E00197530 /* AMapNavi.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = AMapNavi.bundle; sourceTree = "<group>"; };
+		7FA1D0851F53B56A007A9D84 /* 高德地图定位.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "高德地图定位.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		7FA1D0891F53B56A007A9D84 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		7FA1D08B1F53B56A007A9D84 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		7FA1D08C1F53B56A007A9D84 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		7FA1D08E1F53B56A007A9D84 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		7FA1D08F1F53B56A007A9D84 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		7FA1D0921F53B56A007A9D84 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		7FA1D0941F53B56A007A9D84 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		7FA1D0971F53B56A007A9D84 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		7FA1D0991F53B56A007A9D84 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		7FA1D0A01F53B5FD007A9D84 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+		7FA1D0A31F53B655007A9D84 /* AMapFoundationKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = AMapFoundationKit.framework; sourceTree = "<group>"; };
+		7FA1D0A41F53B655007A9D84 /* AMapSearchKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = AMapSearchKit.framework; sourceTree = "<group>"; };
+		7FA1D0A51F53B655007A9D84 /* MAMapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = MAMapKit.framework; sourceTree = "<group>"; };
+		7FA1D0A91F53B855007A9D84 /* libc++.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = "libc++.tbd"; path = "usr/lib/libc++.tbd"; sourceTree = SDKROOT; };
+		7FA1D0AB1F53B861007A9D84 /* libz.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libz.tbd; path = usr/lib/libz.tbd; sourceTree = SDKROOT; };
+		7FA1D0AD1F53B86B007A9D84 /* libstdc++.6.0.9.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = "libstdc++.6.0.9.tbd"; path = "usr/lib/libstdc++.6.0.9.tbd"; sourceTree = SDKROOT; };
+		7FA1D0AF1F53B875007A9D84 /* GLKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GLKit.framework; path = System/Library/Frameworks/GLKit.framework; sourceTree = SDKROOT; };
+		7FA1D0B11F53B87E007A9D84 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
+		7FA1D0B31F53B886007A9D84 /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = System/Library/Frameworks/JavaScriptCore.framework; sourceTree = SDKROOT; };
+		7FA1D0B51F53B88F007A9D84 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		7FA1D0B71F53B89B007A9D84 /* CoreTelephony.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreTelephony.framework; path = System/Library/Frameworks/CoreTelephony.framework; sourceTree = SDKROOT; };
+		7FA1D0B91F53B9A8007A9D84 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
+		7FA1D0BB1F53B9F4007A9D84 /* AMap.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = AMap.bundle; sourceTree = "<group>"; };
+		7FA1D0BD1F53EB2A007A9D84 /* AMapLocationKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = AMapLocationKit.framework; sourceTree = "<group>"; };
+		7FA1D0BF1F5417A4007A9D84 /* TableCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TableCell.h; sourceTree = "<group>"; };
+		7FA1D0C01F5417A4007A9D84 /* TableCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TableCell.m; sourceTree = "<group>"; };
+		7FA1D0C11F5417A4007A9D84 /* TableCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TableCell.xib; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		7FA1D0821F53B56A007A9D84 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7FA1D0BA1F53B9A8007A9D84 /* SystemConfiguration.framework in Frameworks */,
+				7FA1D0B81F53B89B007A9D84 /* CoreTelephony.framework in Frameworks */,
+				7FA1D0B61F53B88F007A9D84 /* CoreLocation.framework in Frameworks */,
+				7FA1D0B41F53B886007A9D84 /* JavaScriptCore.framework in Frameworks */,
+				7FA1D0B21F53B87E007A9D84 /* Security.framework in Frameworks */,
+				7F909CB21F55721800197530 /* AMapNaviKit.framework in Frameworks */,
+				7FA1D0B01F53B875007A9D84 /* GLKit.framework in Frameworks */,
+				7FA1D0AE1F53B86B007A9D84 /* libstdc++.6.0.9.tbd in Frameworks */,
+				7FA1D0AC1F53B861007A9D84 /* libz.tbd in Frameworks */,
+				7FA1D0AA1F53B855007A9D84 /* libc++.tbd in Frameworks */,
+				7FA1D0A11F53B5FD007A9D84 /* MapKit.framework in Frameworks */,
+				7FA1D0A61F53B655007A9D84 /* AMapFoundationKit.framework in Frameworks */,
+				7FA1D0A81F53B655007A9D84 /* MAMapKit.framework in Frameworks */,
+				7FA1D0A71F53B655007A9D84 /* AMapSearchKit.framework in Frameworks */,
+				7FA1D0BE1F53EB2A007A9D84 /* AMapLocationKit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		7FA1D07C1F53B56A007A9D84 = {
+			isa = PBXGroup;
+			children = (
+				7FA1D0871F53B56A007A9D84 /* 高德地图定位 */,
+				7FA1D0861F53B56A007A9D84 /* Products */,
+				7FA1D09F1F53B5FD007A9D84 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		7FA1D0861F53B56A007A9D84 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				7FA1D0851F53B56A007A9D84 /* 高德地图定位.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		7FA1D0871F53B56A007A9D84 /* 高德地图定位 */ = {
+			isa = PBXGroup;
+			children = (
+				7FA1D08B1F53B56A007A9D84 /* AppDelegate.h */,
+				7FA1D08C1F53B56A007A9D84 /* AppDelegate.m */,
+				7FA1D08E1F53B56A007A9D84 /* ViewController.h */,
+				7FA1D08F1F53B56A007A9D84 /* ViewController.m */,
+				7F909CB31F55731B00197530 /* NaviViewController.h */,
+				7F909CB41F55731B00197530 /* NaviViewController.m */,
+				7F909CB51F55731B00197530 /* NaviViewController.xib */,
+				7FA1D0BF1F5417A4007A9D84 /* TableCell.h */,
+				7FA1D0C01F5417A4007A9D84 /* TableCell.m */,
+				7FA1D0C11F5417A4007A9D84 /* TableCell.xib */,
+				7FA1D0911F53B56A007A9D84 /* Main.storyboard */,
+				7F909CB81F559F5600197530 /* SpeechSynthesizer.h */,
+				7F909CB91F559F5600197530 /* SpeechSynthesizer.m */,
+				7F909CBB1F55A34F00197530 /* DriveNaviViewController.h */,
+				7F909CBC1F55A34F00197530 /* DriveNaviViewController.m */,
+				7F909CC11F55A6BA00197530 /* QuickStartAnnotationView.h */,
+				7F909CC21F55A6BA00197530 /* QuickStartAnnotationView.m */,
+				7F909CBE1F55A39900197530 /* MoreMenuView.h */,
+				7F909CBF1F55A39900197530 /* MoreMenuView.m */,
+				7FA1D0941F53B56A007A9D84 /* Assets.xcassets */,
+				7F909CC41F55A95B00197530 /* navi@2x.png */,
+				7F909CC51F55A95B00197530 /* naviBackgroundHighlighted.png */,
+				7F909CC61F55A95B00197530 /* naviBackgroundNormal.png */,
+				7FA1D0961F53B56A007A9D84 /* LaunchScreen.storyboard */,
+				7FA1D0991F53B56A007A9D84 /* Info.plist */,
+				7FA1D0A21F53B643007A9D84 /* New Group */,
+				7FA1D0881F53B56A007A9D84 /* Supporting Files */,
+			);
+			path = "高德地图定位";
+			sourceTree = "<group>";
+		};
+		7FA1D0881F53B56A007A9D84 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				7FA1D0891F53B56A007A9D84 /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		7FA1D09F1F53B5FD007A9D84 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				7FA1D0B91F53B9A8007A9D84 /* SystemConfiguration.framework */,
+				7FA1D0B71F53B89B007A9D84 /* CoreTelephony.framework */,
+				7FA1D0B51F53B88F007A9D84 /* CoreLocation.framework */,
+				7FA1D0B31F53B886007A9D84 /* JavaScriptCore.framework */,
+				7FA1D0B11F53B87E007A9D84 /* Security.framework */,
+				7FA1D0AF1F53B875007A9D84 /* GLKit.framework */,
+				7FA1D0AD1F53B86B007A9D84 /* libstdc++.6.0.9.tbd */,
+				7FA1D0AB1F53B861007A9D84 /* libz.tbd */,
+				7FA1D0A91F53B855007A9D84 /* libc++.tbd */,
+				7FA1D0A01F53B5FD007A9D84 /* MapKit.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		7FA1D0A21F53B643007A9D84 /* New Group */ = {
+			isa = PBXGroup;
+			children = (
+				7F909CCA1F55AD1E00197530 /* AMapNavi.bundle */,
+				7F909CB11F55721800197530 /* AMapNaviKit.framework */,
+				7FA1D0BD1F53EB2A007A9D84 /* AMapLocationKit.framework */,
+				7FA1D0BB1F53B9F4007A9D84 /* AMap.bundle */,
+				7FA1D0A31F53B655007A9D84 /* AMapFoundationKit.framework */,
+				7FA1D0A41F53B655007A9D84 /* AMapSearchKit.framework */,
+				7FA1D0A51F53B655007A9D84 /* MAMapKit.framework */,
+			);
+			name = "New Group";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		7FA1D0841F53B56A007A9D84 /* 高德地图定位 */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 7FA1D09C1F53B56A007A9D84 /* Build configuration list for PBXNativeTarget "高德地图定位" */;
+			buildPhases = (
+				7FA1D0811F53B56A007A9D84 /* Sources */,
+				7FA1D0821F53B56A007A9D84 /* Frameworks */,
+				7FA1D0831F53B56A007A9D84 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "高德地图定位";
+			productName = "高德地图定位";
+			productReference = 7FA1D0851F53B56A007A9D84 /* 高德地图定位.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		7FA1D07D1F53B56A007A9D84 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0830;
+				ORGANIZATIONNAME = "驿路梨花";
+				TargetAttributes = {
+					7FA1D0841F53B56A007A9D84 = {
+						CreatedOnToolsVersion = 8.3.3;
+						DevelopmentTeam = 8LHRT6ZPQH;
+						ProvisioningStyle = Automatic;
+						SystemCapabilities = {
+							com.apple.BackgroundModes = {
+								enabled = 1;
+							};
+							com.apple.Maps.iOS = {
+								enabled = 1;
+							};
+						};
+					};
+				};
+			};
+			buildConfigurationList = 7FA1D0801F53B56A007A9D84 /* Build configuration list for PBXProject "高德地图定位" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 7FA1D07C1F53B56A007A9D84;
+			productRefGroup = 7FA1D0861F53B56A007A9D84 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				7FA1D0841F53B56A007A9D84 /* 高德地图定位 */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		7FA1D0831F53B56A007A9D84 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7F909CB71F55731B00197530 /* NaviViewController.xib in Resources */,
+				7FA1D0981F53B56A007A9D84 /* LaunchScreen.storyboard in Resources */,
+				7FA1D0951F53B56A007A9D84 /* Assets.xcassets in Resources */,
+				7FA1D0BC1F53B9F4007A9D84 /* AMap.bundle in Resources */,
+				7FA1D0931F53B56A007A9D84 /* Main.storyboard in Resources */,
+				7F909CC71F55A95B00197530 /* navi@2x.png in Resources */,
+				7F909CCB1F55AD1E00197530 /* AMapNavi.bundle in Resources */,
+				7F909CC91F55A95B00197530 /* naviBackgroundNormal.png in Resources */,
+				7FA1D0C31F5417A4007A9D84 /* TableCell.xib in Resources */,
+				7F909CC81F55A95B00197530 /* naviBackgroundHighlighted.png in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		7FA1D0811F53B56A007A9D84 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7FA1D0901F53B56A007A9D84 /* ViewController.m in Sources */,
+				7FA1D08D1F53B56A007A9D84 /* AppDelegate.m in Sources */,
+				7FA1D0C21F5417A4007A9D84 /* TableCell.m in Sources */,
+				7F909CC31F55A6BA00197530 /* QuickStartAnnotationView.m in Sources */,
+				7F909CBD1F55A34F00197530 /* DriveNaviViewController.m in Sources */,
+				7F909CC01F55A39900197530 /* MoreMenuView.m in Sources */,
+				7F909CB61F55731B00197530 /* NaviViewController.m in Sources */,
+				7F909CBA1F559F5600197530 /* SpeechSynthesizer.m in Sources */,
+				7FA1D08A1F53B56A007A9D84 /* main.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		7FA1D0911F53B56A007A9D84 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				7FA1D0921F53B56A007A9D84 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		7FA1D0961F53B56A007A9D84 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				7FA1D0971F53B56A007A9D84 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		7FA1D09A1F53B56A007A9D84 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		7FA1D09B1F53B56A007A9D84 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		7FA1D09D1F53B56A007A9D84 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = 8LHRT6ZPQH;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/高德地图定位",
+				);
+				INFOPLIST_FILE = "高德地图定位/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_BUNDLE_IDENTIFIER = com.gaode.cn;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		7FA1D09E1F53B56A007A9D84 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = 8LHRT6ZPQH;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/高德地图定位",
+				);
+				INFOPLIST_FILE = "高德地图定位/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_BUNDLE_IDENTIFIER = com.gaode.cn;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		7FA1D0801F53B56A007A9D84 /* Build configuration list for PBXProject "高德地图定位" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7FA1D09A1F53B56A007A9D84 /* Debug */,
+				7FA1D09B1F53B56A007A9D84 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		7FA1D09C1F53B56A007A9D84 /* Build configuration list for PBXNativeTarget "高德地图定位" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7FA1D09D1F53B56A007A9D84 /* Debug */,
+				7FA1D09E1F53B56A007A9D84 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 7FA1D07D1F53B56A007A9D84 /* Project object */;
+}
