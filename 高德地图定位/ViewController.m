@@ -108,27 +108,27 @@
     //定位自己的图片更换成自己的图片
     [self setUserLocationRePresention];
    
-//    self.locationManger = [[AMapLocationManager alloc] init];
-//    self.locationManger.delegate = self;
-//    self.locationManger.distanceFilter =  200;
-//    //持续定位返回逆地理编码
-//    self.locationManger.locatingWithReGeocode = YES;
-//     [self.locationManger startUpdatingLocation];
+    self.locationManger = [[AMapLocationManager alloc] init];
+    self.locationManger.delegate = self;
+    self.locationManger.distanceFilter =  200;
+    //持续定位返回逆地理编码
+    self.locationManger.locatingWithReGeocode = YES;
+     [self.locationManger startUpdatingLocation];
  
     self.search =[[AMapSearchAPI alloc] init];
     self.search.delegate = self;
     
-    self.searchTextField = [[UITextField alloc] initWithFrame:CGRectMake(30, 30, screenWidth-60-30, 40)];
+    self.searchTextField = [[UITextField alloc] initWithFrame:CGRectMake(30, 40, screenWidth-60-30, 40)];
     self.searchTextField.delegate = self;
     self.searchTextField.backgroundColor =[[UIColor whiteColor] colorWithAlphaComponent:0.5];
     self.searchTextField.placeholder = @"搜索附近的餐厅";
     [self.view addSubview:self.searchTextField];
     
     UIButton *searchBtn =[UIButton buttonWithType:UIButtonTypeCustom];
-    searchBtn.frame = CGRectMake(screenWidth-60, 30, 60, 40);
+    searchBtn.frame = CGRectMake(screenWidth-60, 40, 60, 40);
     
     [searchBtn setTitle:@"搜索" forState:UIControlStateNormal];
-    [searchBtn setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
+    [searchBtn setTitleColor:[UIColor blueColor] forState:UIControlStateNormal];
     searchBtn.titleLabel.font =[UIFont systemFontOfSize:13];
     [searchBtn addTarget:self action:@selector(searchBtn) forControlEvents:UIControlEventTouchUpInside];
     [self.view addSubview:searchBtn];
@@ -138,11 +138,11 @@
     [driveBtn setTitle:@"驾车" forState:UIControlStateNormal];
     [driveBtn setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
     [driveBtn addTarget:self action:@selector(driveCar) forControlEvents:UIControlEventTouchUpInside];
-    [self.view addSubview:driveBtn];
+//    [self.view addSubview:driveBtn];
     
     [self.resultTableView registerNib:[UINib nibWithNibName:@"TableCell" bundle:nil] forCellReuseIdentifier:@"cell"];
-//    self.resultTableView.delegate = self;
-//    self.resultTableView.dataSource = self;
+    self.resultTableView.delegate = self;
+    self.resultTableView.dataSource = self;
     
     self.pointAnnotation2 = [[MAPointAnnotation alloc] init];
     
@@ -154,8 +154,8 @@
         
         self.driveManager.updateTrafficInfo = YES;
         
-//        [self.driveManager setAllowsBackgroundLocationUpdates:YES];
-//        [self.driveManager setPausesLocationUpdatesAutomatically:NO];
+        [self.driveManager setAllowsBackgroundLocationUpdates:YES];
+        [self.driveManager setPausesLocationUpdatesAutomatically:NO];
 
 }
 #pragma mark 把系统的图标设置成自己的图标
@@ -258,9 +258,11 @@
     CLGeocoder *g =[[CLGeocoder alloc] init];
     
     [g reverseGeocodeLocation:lo completionHandler:^(NSArray<CLPlacemark *> * _Nullable placemarks, NSError * _Nullable error) {
+        //mark.locality,mark.subLocality,mark.thoroughfare
+        //mark.subThoroughfare;
         CLPlacemark *mark = placemarks.lastObject;
         self.cityName = mark.locality;
-        self.cityAddress = mark.subThoroughfare;
+        self.cityAddress =[NSString stringWithFormat:@"%@%@%@",mark.locality,mark.subLocality,mark.thoroughfare];
         NSLog(@"得到城市名字 ::%@,%@,", self.cityName,self.cityAddress);
     }];
 }
@@ -330,7 +332,10 @@
         [self.nameDatasource addObject:p.name];
         [self.addressDatasoure addObject:p.address];
         NSLog(@"%@",p.location);
-//        [self.locationDatasource addObject:p.location];
+        if (p.location) {
+            [self.locationDatasource addObject:p.location];
+        }
+        
     }
     
     //刷新表视图
@@ -354,15 +359,15 @@
             [self.pointDatasource addObject:annotation];
          }];
         //下面是展示在tableview上的，点击每一个弹出一个地址的定位，属于单个定位，上面的方法是搜索出来全部展示在mapview上，把上面的方法注释掉，打开下面的，并打开代理就可以使用了。
-//        NSArray *array = response.pois;
-//        for (int i = 0 ; i < array.count; i ++ ) {
-//            AMapPOI *poi = array[i];
-//            NSLog(@"名字：%@===地址：%@==电话：%@===距离:%ld",poi.name,poi.address,poi.tel,(long)poi.distance);
-//            [self.nameDatasource addObject:poi.name];
-//            [self.addressDatasoure addObject:poi.address];
-//            //AMapGeoPoint *location;
-//            [self.locationDatasource addObject:poi.location];
-//        }
+        NSArray *array = response.pois;
+        for (int i = 0 ; i < array.count; i ++ ) {
+            AMapPOI *poi = array[i];
+            NSLog(@"名字：%@===地址：%@==电话：%@===距离:%ld",poi.name,poi.address,poi.tel,(long)poi.distance);
+            [self.nameDatasource addObject:poi.name];
+            [self.addressDatasoure addObject:poi.address];
+            //AMapGeoPoint *location;
+            [self.locationDatasource addObject:poi.location];
+        }
         
     }
     [self showPOIAnnotations];
@@ -506,7 +511,7 @@
     _pointAnnotation2.subtitle = self.addressDatasoure[indexPath.row];
     
     [_mapView addAnnotation:_pointAnnotation2];
-    [_mapView setZoomLevel:10.5 animated:YES];
+    [_mapView setZoomLevel:17.5 animated:YES];
 
     self.destionlatitude = location.latitude;
     self.destionlongitude = location.longitude;
@@ -514,30 +519,7 @@
      // 你可以点击地址的时候 把地址的经纬度赋给
     _mapView.centerCoordinate = CLLocationCoordinate2DMake(location.latitude, location.longitude);
     //这样你点击哪个地址 哪个地址就会显示在地图中间全
- /*
- level: 距离(米)
- 22: 2;
- 21: 5;
- 20: 10;
- 19: 20;
- 18: 50;
- 17: 100;
- 16: 200;
- 15: 500;
- 14: 1000;
- 13: 2000;
- 12: 5000;
- 11: 10000;
- 10: 20000;
- 9: 25000;
- 8: 50000;
- 7: 100000;
- 6: 200000;
- 5: 500000;
- 4: 1000000;
- 3: 2000000;
  
- */
 }
 
 
