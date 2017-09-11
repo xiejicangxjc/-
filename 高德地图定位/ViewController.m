@@ -74,6 +74,8 @@
 }
 #define screenWidth  [UIScreen mainScreen].bounds.size.width
 #define screenHeight  [UIScreen mainScreen].bounds.size.height
+
+
 - (UITableView *)resultTableView{
     if (!_resultTableView) {
         self.resultTableView =[[UITableView alloc] initWithFrame:CGRectMake(0, screenWidth-30, screenWidth, screenHeight- screenWidth+30) style:UITableViewStylePlain];
@@ -94,8 +96,8 @@
     _mapView.delegate = self;
     [self.view addSubview:self.mapView];
     //后台定位
-    _mapView.pausesLocationUpdatesAutomatically = NO;
-    _mapView.allowsBackgroundLocationUpdates = YES;
+//    _mapView.pausesLocationUpdatesAutomatically = NO;
+//    _mapView.allowsBackgroundLocationUpdates = YES;
     //开始定位,需要添加下面两句话//此时就会显示 定位到自己，并显示蓝点，但是此时显示的是整个是市。想要显示自己周边的街道，超市，精确显示，就要添加--
     self.mapView.showsUserLocation = YES;
     self.mapView.userTrackingMode = MAUserTrackingModeFollow;
@@ -106,12 +108,12 @@
     //定位自己的图片更换成自己的图片
     [self setUserLocationRePresention];
    
-    self.locationManger = [[AMapLocationManager alloc] init];
-    self.locationManger.delegate = self;
-    self.locationManger.distanceFilter =  200;
-    //持续定位返回逆地理编码
-    self.locationManger.locatingWithReGeocode = YES;
-     [self.locationManger startUpdatingLocation];
+//    self.locationManger = [[AMapLocationManager alloc] init];
+//    self.locationManger.delegate = self;
+//    self.locationManger.distanceFilter =  200;
+//    //持续定位返回逆地理编码
+//    self.locationManger.locatingWithReGeocode = YES;
+//     [self.locationManger startUpdatingLocation];
  
     self.search =[[AMapSearchAPI alloc] init];
     self.search.delegate = self;
@@ -152,8 +154,8 @@
         
         self.driveManager.updateTrafficInfo = YES;
         
-        [self.driveManager setAllowsBackgroundLocationUpdates:YES];
-        [self.driveManager setPausesLocationUpdatesAutomatically:NO];
+//        [self.driveManager setAllowsBackgroundLocationUpdates:YES];
+//        [self.driveManager setPausesLocationUpdatesAutomatically:NO];
 
 }
 #pragma mark 把系统的图标设置成自己的图标
